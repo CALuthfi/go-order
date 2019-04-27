@@ -5,9 +5,9 @@ export default class Finis extends Component {
   render() {
     return (
       <div>
-        <Navbar subjudul="Go-App" />
+        <Navbar subjudul="Go-Ordering" />
 
-        <Jumbo judul="Thank you for ordering" />
+        <Jumbo judul="Thank you for ordering good Luck" />
       </div>
     );
   }

@@ -6,14 +6,15 @@ import { Link } from "react-router-dom";
 const Jumbo = props => {
   return (
     <div>
-      <Jumbotron className="ct">
+      <Jumbotron className="contoh">
         <h1 className="display-3">{props.judul}</h1>
-
-        <p className="lead">
-          <Button color="primary" tag={Link} to="/">
-            Learn More
-          </Button>
-        </p>
+        <br />
+        <Button outline color="primary">
+          primary
+        </Button>{" "}
+        <Button color="primary" tag={Link} to="/">
+          Register
+        </Button>
       </Jumbotron>
     </div>
   );

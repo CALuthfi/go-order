@@ -1,13 +1,6 @@
 import React from "react";
 import "../asset/all.css";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink
-} from "reactstrap";
+import { Navbar } from "reactstrap";
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -26,7 +19,11 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <Navbar style={{ backgroundColor: "red" }} light expand="md">
+        <Navbar
+          style={{ backgroundColor: "red", color: "white" }}
+          light
+          expand="md"
+        >
           <h1 className="jd" href="/">
             {this.props.subjudul}
           </h1>

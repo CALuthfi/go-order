@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-
 import { Row, Col } from "reactstrap";
-
 import Card from "./card";
+
 class Body extends Component {
   state = {
     situs: [
@@ -11,28 +10,28 @@ class Body extends Component {
 
         nama: "Go-Food",
         gambar:
-          "https://asset-a.grid.id//crop/0x0:0x0/700x465/photo/bobofoto/original/5451_foto-dafafoodindocom.jpg"
+          "https://www.goodnewsfromindonesia.id/uploads/post/large-61658247234-go-food-846971cd9193ffd74180a532f479cdfe.jpg"
       },
       {
         link: "/about",
 
         nama: "Go-Jek",
         gambar:
-          "https://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/master/pass/the-ultimate-hamburger.jpg"
+          "https://media.tabloidbintang.com/files/thumb/9f231ee9fbd603871b099329087368a4.jpg/745"
       },
       {
         link: "/about",
 
         nama: "Go-Grab",
         gambar:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSy_r4kpuLRcqj6StSSP-M0_Lk83XFXxFIzgwJzvq6Qf5B20Lw"
+          "https://www.grab.com/id/wp-content/uploads/sites/9/2018/04/Grab-logo-social.png"
       },
       {
         link: "/about",
 
-        nama: "Go-shoope",
+        nama: "Go-Mall",
         gambar:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKyQ8YDdLZyuMzaDjtgPsjuEJDKth7JmJDFHcj_RhsWTb_VcDk"
+          "https://images-platform.99static.com/R939Cixq5B0hz2nE_nRQZfxX-rw=/597x353:1403x1159/500x500/top/smart/99designs-contests-attachments/94/94411/attachment_94411084"
       }
     ]
   };
@@ -42,7 +41,7 @@ class Body extends Component {
       <div>
         <Row>
           {this.state.situs.map(item => (
-            <Col xs="3">
+            <Col xs="6">
               <Card gambar={item.gambar} name={item.nama} link={item.link} />
             </Col>
           ))}

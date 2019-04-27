@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Card, Button, CardTitle, Row, Col, CardImg } from "reactstrap";
+import { Card, Button, Row, Col, CardImg } from "reactstrap";
 
 import { Link } from "react-router-dom";
 
-export default class Kartu extends Component {
+export default class Cabang extends Component {
   render() {
     return (
       <div
@@ -23,24 +23,21 @@ export default class Kartu extends Component {
             <Col xs="6">
               <CardImg
                 top
-                style={{ height: "300px", width: "100%" }}
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSy_r4kpuLRcqj6StSSP-M0_Lk83XFXxFIzgwJzvq6Qf5B20Lw"
+                style={{ height: "350px", width: "100%" }}
+                src={this.props.gambar}
                 alt="Card"
               />
             </Col>
             <Col xs="6" style={{ textAlign: "center" }}>
-              <h2>
-                <center>pizza</center>
-              </h2>
+              <h4>
+                <center>{this.props.toko}</center>
+              </h4>
               <hr />
-              <h3>0</h3>
-              <CardTitle>
-                <Button>+</Button>
 
-                <Button>-</Button>
-              </CardTitle>
-              <Button tag={Link} to="/contact">
-                pesan
+              <h5>Alamat : {this.props.jalan}</h5>
+
+              <Button onClick={this.props.pilihResto} tag={Link} to="/contact">
+                Kunjungi
               </Button>
             </Col>
           </Row>

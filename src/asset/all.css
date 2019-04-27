@@ -1,8 +1,14 @@
-.ct {
+.contoh {
   align-items: center;
+  background: url("https://ak5.picdn.net/shutterstock/videos/26442755/thumb/1.jpg");
+  width: "50%";
 }
 
 .jd {
   font-family: "Bevan";
-  color: "#fafafa";
+  background-color: "#fafafa";
+}
+
+.bk {
+  background: url("http://static.hdw.eweb4.com/media/wallpapers_2560x1600/abstract/1/1/blurry-light-circles-abstract-hd-wallpaper-2560x1600-8080.jpg");
 }
