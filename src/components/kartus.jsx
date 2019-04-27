@@ -259,7 +259,7 @@ class Kartus extends Component {
         <Jumbotron className="bk">
           <h1 className="display-3">Ordering!</h1>
           <p className="lead">
-            daftar isi pesanan anda telah tercantum di bawah ini
+            daftar isi pesanan anda telah tercantum di bawah ini.
           </p>
           <hr className="my-2" />
           <Table>
