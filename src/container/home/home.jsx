@@ -7,7 +7,7 @@ class Home extends Component {
     return (
       <div>
         <Navbar subjudul="Go-Order" />
-        <Jumbo judul="Welcome to the Go-Order" />
+        <Jumbo css="contoh" judul="Welcome to the Go-Order" />
         <Coba />
       </div>
     );
