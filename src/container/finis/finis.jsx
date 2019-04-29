@@ -7,7 +7,7 @@ export default class Finis extends Component {
       <div>
         <Navbar subjudul="Go-Ordering" />
 
-        <Jumbo judul="Thank you for ordering good Luck" />
+        <Jumbo css="bb" judul="Thank you orderan kamu akan di kirim" />
       </div>
     );
   }

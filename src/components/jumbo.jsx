@@ -11,11 +11,9 @@ const Jumbo = props => {
           {props.judul}
         </h1>
         <br />
-        <Button outline color="primary">
-          primary
-        </Button>{" "}
+
         <Button color="primary" tag={Link} to="/">
-          Register
+          Oke
         </Button>
       </Jumbotron>
     </div>

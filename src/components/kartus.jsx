@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../asset/all.css";
 import Menu from "./menu";
+import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
 
 import { Row, Col, Jumbotron, Button, Table } from "reactstrap";
@@ -75,11 +76,15 @@ class Kartus extends Component {
     qty: 0,
     orderan: []
   };
-
-  tambahTotalHarga = (harga, qty) => {
+  kurangTotalHarga = harga => {
     this.setState({
-      total: this.state.total + harga,
-      pesan: this.state.pesan + qty
+      total: this.state.total - harga
+    });
+  };
+
+  tambahTotalHarga = harga => {
+    this.setState({
+      total: this.state.total + harga
     });
 
     //fungsi untuk ambil data storage
@@ -105,18 +110,26 @@ class Kartus extends Component {
     const { menus, pesan, resto, total, orderan } = this.state;
     return (
       <div>
-        <Row>
+        <Grid
+          container
+          spacing={8}
+          style={{
+            paddingTop: 15,
+            paddingBottom: "15%"
+          }}
+        >
           {menus.map(menu => (
-            <Col xs="3">
+            <Grid item xs={4}>
               <Menu
                 paket={menu.paket}
                 gambar={menu.gambar}
                 harga={menu.harga}
                 tambahTotalHarga={this.tambahTotalHarga}
+                kurangTotalHarga={this.kurangTotalHarga}
               />
-            </Col>
+            </Grid>
           ))}
-        </Row>
+        </Grid>
         <Jumbotron className="bk">
           <h1 style={{ textAlign: "center" }}>Ordering!</h1>
           <hr />
@@ -155,7 +168,7 @@ class Kartus extends Component {
                       return <h5>{item.paket}</h5>;
                     })}
                   </th>
-                  <th>{pesan}</th>
+                  <th>{this.tambahTotalHarga}</th>
                   <th>{total}</th>
                 </tr>
               )}
