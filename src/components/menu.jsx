@@ -51,9 +51,10 @@ export default class Menu extends Component {
             />
             <CardTitle>paket hemat</CardTitle>
             <Navbar>
-              <Button onClick={this.tambah}>+</Button>
-              <h4>{this.state.qty}</h4>
               <Button onClick={this.kurang}>-</Button>
+              <h4>{this.state.qty}</h4>
+
+              <Button onClick={this.tambah}>+</Button>
             </Navbar>
           </CardBody>
           <CardFooter className="text-muted">{this.props.harga}</CardFooter>
